@@ -7,6 +7,14 @@ public class CreateProductEndpoint : ICarterModule
 {
     public void AddRoutes(IEndpointRouteBuilder app)
     {
+        /// <summary>
+        ///     Configures the endpoint routing for creating a new product.
+        /// </summary>
+        /// <param name="app">The endpoint route builder.</param>
+        /// <remarks>
+        ///     Maps a POST request to the "/products" endpoint, 
+        ///     which creates a new product and returns the created product with a 201 status code.
+        /// </remarks>
         app.MapPost("/products",
             async (CreateProductRequest request, ISender sender) =>
             {
